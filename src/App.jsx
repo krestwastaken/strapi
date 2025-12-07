@@ -1,14 +1,12 @@
-import { useState } from "react";
+import Navbar from "./Navbar";
+import { useGlobalContext } from "./context";
 
 const App = () => {
-  const [isSidebarOpen, setIsSidebarOpen]=useState(false)
+ const {isSidebarOpen, openSidebar}=useGlobalContext()
 
-  const openSidebar = ()=>{
-    setIsSidebarOpen(true)
-  }
-  const closeSidebar = ()=>{
-    setIsSidebarOpen(false)
-  }
-  return <h2>Strapi Starter</h2>;
+  
+  return <main>Strapi Starter
+    <Navbar openSidebar={openSidebar} />
+  </main>;
 };
 export default App;
