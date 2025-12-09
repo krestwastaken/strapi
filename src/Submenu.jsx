@@ -2,7 +2,7 @@ import React from 'react'
 
 const Submenu = () => {
   return (
-    <div>Submenu</div>
+    <h2>Submenu</h2>
   )
 }
 
